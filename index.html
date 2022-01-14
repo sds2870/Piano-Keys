@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Days</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <script>
+        function rain () {
+           let volume = 20; 
+           let mass = document.querySelector("body");
+           let index = 0;
+           while (index < volume) {
+               let drops = document.createElement("index");
+
+               let magnitude = Math.random() *5
+               let posX = Math.floor(Math.random() * window.innerWidth);
+
+               drops.style.width = 0.2 + magnitude + "px" 
+               drops.style.left = posX + "px";
+               mass.appendChild(drops)
+               index += 1;
+           }
+        }
+        rain()
+    </script>
+    <!-- <script src="./code.js"></script> -->
+</body>
+</html>
