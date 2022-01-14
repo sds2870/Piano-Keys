@@ -10,7 +10,7 @@
 <body>
     <script>
         function rain () {
-           let volume = 20; 
+           let volume = 200; 
            let mass = document.querySelector("body");
            let index = 0;
            while (index < volume) {
@@ -18,15 +18,19 @@
 
                let magnitude = Math.random() *5
                let posX = Math.floor(Math.random() * window.innerWidth);
+               let impede = Math.random() * -20;
+               let lengthOfTime = Math.random() * 5;
+
 
                drops.style.width = 0.2 + magnitude + "px" 
                drops.style.left = posX + "px";
+               drops.style.animationDelay = impede+"s";
+               drops.style.animationDuration = lengthOfTime+"s";
                mass.appendChild(drops)
                index += 1;
            }
         }
         rain()
     </script>
-    <!-- <script src="./code.js"></script> -->
 </body>
 </html>

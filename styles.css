@@ -9,3 +9,34 @@ body {
     overflow: hidden;
     height: 100vh;
 }
+
+index {
+   position: absolute; 
+   height: 200px;
+   background: linear-gradient(transparent, #fff);
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   animation: animate 5s linear infinite;
+}
+
+index:nth-child(3n+1) {
+    background: linear-gradient(transparent, #006eff);
+}
+
+index:nth-child(3n+2) {
+    background: linear-gradient(transparent, #720b69);
+}
+
+index:nth-child(3n+3) {
+    background: linear-gradient(transparent, #f00);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(calc(100vh + 200px));
+    }
+}
